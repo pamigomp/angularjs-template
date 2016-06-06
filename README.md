@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.org/pamigomp/angularjs-template.svg?branch=master)](https://travis-ci.org/pamigomp/angularjs-template)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/pamigomp/angularjs-template.svg)](https://david-dm.org/pamigomp/angularjs-template)
-[![devDependency Status](https://david-dm.org/pamigomp/angularjs-template/dev-status.svg)](https://david-dm.org/pamigomp/angularjs-template#info=devDependencies)
+[![Dependency Status](https://gemnasium.com/badges/github.com/pamigomp/angularjs-template.svg)](https://gemnasium.com/github.com/pamigomp/angularjs-template)
 
 This project extends the [seed project](http://github.com/angular/angular-seed) for angular apps provided by AngularJS team. It also bases on an awesome [John Papa's style guide](https://github.com/johnpapa/angular-styleguide). It is an application template for a typical [AngularJS](http://angularjs.org/) web app. You can use it to quickly bootstrap your angular web app projects and dev environment for these projects.
 
@@ -76,50 +75,40 @@ Now browse to the app at `http://localhost:8000/app/index.html`.
 
 ```
 app/                                --> all of the source files for the application
+  assets/                               --> other application files
+    css/                                  --> custom styles
+    data/                                 --> custom data
+    fonts/                                --> custom fonts
+    images/                               --> custom images
+    js/                                   --> custom JavaScript files
+    libs/                                 --> custom libraries
   bower_components/                     --> the angular framework files
-  fonts/                                --> custom fonts
-  images/                               --> custom images
-  scripts/                              --> app scripts
-    controllers/                            --> custom fonts
-      view1.js                                  --> the view1 logic
-      view2.js                                  --> the view2 logic
-      version.js                                --> version module declaration and basic "version" value service
-    directives/                             --> custom angular directives
-      version-directive.js                      --> custom directive that returns the current app version
+  common/                               --> common application files
+    constants/                              --> custom angular constants    
+    directives/                             --> custom angular directives    
     filters/                                --> custom angular filters
-      interpolate-filter.js                     --> custom interpolation filter
-    services/                               --> custom angular services
+  core/                                 --> main application files
     app.js                                  --> main application module
-  styles/                               -->
-    main.css                                --> default stylesheet
-  views/                                -->
-    view1/                                  --> the view2 view template
-      view1.html                                --> the partial template
-    view2/                                  --> the view2 view template
-      view2.html                                --> the partial template
+    app.routes.js                           --> main application routes
   index.html                            --> app layout file (the main html template file of the app)
-build/                              --> minified 
+build/                              --> minified JavaScript files
 node_modules/                       --> the npm packages for the tools we need
 coverage/                           --> coverage reports
+dist/                               --> concatenated JavaScript files
 protractor-test-results/            --> e2e tests results
 tests/                              --> tests scenarios
   e2e/                                  --> end-to-end tests
-    scenarios.js                            --> end-to-end scenarios to be run by Protractor
   unit/                                 --> unit tests
-    view1_test.js                           --> tests of the controller
-    view2_test.js                           --> tests of the controller
-    interpolate-filter_test.js              --> interpolate filter tests
-    version-directive_test.js               --> version directive tests
-    version_test.js                         --> "version" value service tests
 unit-test-results/                  --> unit tests results
-.bowerrc                            -->
-.gitignore                          -->
+.bowerrc                            --> bower options file
+.gitignore                          --> git ignore file
+.jscsrc                             --> JSCS options file
 .jshintrc                           --> JSHint options file
 .travis.yml                         --> Travis CI config file
 Gruntfile.js                        --> Grunt config file
-bower.json                          --> dependencies of the project
+bower.json                          --> runtime dependencies of the project
 karma.conf.js                       --> Karma config file (for unit tests)
-package.json                        --> dev dependencies of the project
+package.json                        --> development dependencies of the project
 protractor-conf.js                  --> Protractor config file (for e2e tests)
 ```
 
@@ -132,7 +121,7 @@ There are two kinds of tests in the angularjs-template application: Unit tests a
 The angularjs-template app comes preconfigured with unit tests. These are written in [Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma configuration file to run them.
 
 * the configuration is found at `karma.conf.js`
-* the unit tests are found in `tests/unit/..._test.js`.
+* the unit test files (specs) are placed side-by-side with client code: `app/**/*Spec.js`.
 
 The easiest way to run the unit tests is to use the supplied npm script:
 
