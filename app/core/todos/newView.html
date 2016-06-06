@@ -1,0 +1,19 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Add todo</h3>
+    </div>
+    <div class="panel-body">
+        <form name="form" data-ng-submit="TNC.addTodo()">
+            Name:
+            <textarea class="form-control" name="newTodo" data-ng-model="TNC.formData.newTodo" required></textarea>
+            Type:
+            <select class="form-control" name="type" data-ng-model="TNC.formData.type" data-ng-options="value.name for value in TNC.categories" required></select>
+            Estimated time:
+            <select class="form-control" name="estimates" data-ng-model="TNC.formData.estimates" data-ng-options="value + ' h' for value in ([] | rangeTime:9:true)" required></select>
+            Date:
+            <input class="form-control" type="text" data-ng-model="TNC.formData.date" data-ng-date-picker="" name="date" required readonly="readonly">
+            <br />
+            <button class="btn btn-success" data-ng-disabled="form.$invalid">Add <span class="glyphicon glyphicon-ok"></span></button>
+        </form>
+    </div>
+</div>

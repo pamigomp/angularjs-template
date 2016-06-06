@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">List of mountains</h3>
+    </div>
+    <div class="panel-body">
+        <p data-ng-repeat="mountain in ::MLC.mountains track by $index">
+            {{$index + 1}}. <a data-ui-sref="root.mountains.mountain.details({mountainId: mountain.id})">
+                <span>{{mountain.mountain}}</span>
+                <span class="glyphicon glyphicon-info-sign"></span>
+            </a>
+        </p>
+    </div>
+</div>

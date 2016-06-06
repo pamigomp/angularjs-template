@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Personal",
+        "gico": "heart"
+    },
+    {
+        "name": "Health",
+        "gico": "tint"
+    },
+    {
+        "name": "Science",
+        "gico": "book"
+    },
+    {
+        "name": "Business",
+        "gico": "usd"
+    },
+    {
+        "name": "Home",
+        "gico": "home"
+    },
+    {
+        "name": "Other",
+        "gico": "paperclip"
+    }
+]

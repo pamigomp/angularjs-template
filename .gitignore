@@ -1,0 +1,72 @@
+!.gitkeep
+
+# Ignore Visual Studio  Project #
+#################################
+*.user
+*.gpState
+*.suo
+bin
+obj
+/packages
+
+# Ignore Node, Bower & Sass #
+#############################
+node_modules
+app/bower_components
+build
+dist
+.sass-cache
+.tmp
+tmp
+npm-debug.log
+
+# Ignore Test reporters #
+#########################
+**/test/coverage
+test/tmp
+report
+coverage
+*-test-results
+
+# MongoDB #
+###########
+#Don't commit Mongo Database files
+*.lock
+*.0
+*.1
+*.ns
+journal
+
+# Ignore NetBeans #
+###################
+nbproject
+
+# Ignore WebStorm #
+####################
+.idea
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+# *.sdf
+*.mdf
+*.ldf
+logs/*
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db

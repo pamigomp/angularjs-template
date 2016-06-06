@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="list-group">
+            <a class="list-group-item active">
+                <strong>Details of {{MDC.mountain.mountain}}</strong>
+            </a>
+            <a class="list-group-item">
+                Height: <strong>{{MDC.mountain.metres}}</strong>
+            </a>
+            <a class="list-group-item">
+                Country: <strong>{{MDC.mountain.country}}</strong>
+            </a>
+        </div>
+        <button data-ui-sref="root.mountains.list" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span> Back to list</button>
+        <button data-ng-click="MDC.delete(MDC.mountain.id)" class="btn btn-danger">Delete {{MDC.mountain.mountain}} <span class="glyphicon glyphicon-remove"></span></button>
+    </div>
+</div>

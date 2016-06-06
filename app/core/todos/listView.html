@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">To-do list</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Estimation</th>
+                    <th>Date</th>
+                    <th>Ico</th>
+                    <th>Mark as completed</th>
+                </tr>
+            </thead>
+            <tr data-ng-repeat="todo in ::IC.todos" class="repeat-animation">
+                <td>{{$index + 1}}. </td>
+                <td><span class="done-{{todo.done}}">{{todo.title}}</span></td>
+                <td><span class="done-{{todo.done}}">({{todo.estimates}}h)</span></td>
+                <td><span class="done-{{todo.done}}">{{todo.date}}</span></td>
+                <td><span class="glyphicon glyphicon-{{todo.type.gico}} done-{{todo.done}}" title="{{todo.type.name}}"></span></td>
+                <td><input type="checkbox" data-ng-model="todo.done" title="Mark as completed" /></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <button id="delete-btn" class="btn btn-danger" data-ng-click="TLC.deleteCompleted()">
+            Delete completed <span class="glyphicon glyphicon-remove"></span></button>
+        <button id="add-btn" data-ui-sref="root.todos.new" class="btn btn-success">
+            Add todo <span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+</div>

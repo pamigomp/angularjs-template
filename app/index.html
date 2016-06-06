@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" data-ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" data-ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" data-ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="app" data-ng-strict-di sclass="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AngularJS Template</title>
+        <meta name="description" content="AngularJS Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+    </head>
+    <body data-ng-controller="IndexController as IC">
+        <div class="container">
+            <header data-ui-view="header"></header>
+            <nav data-ui-view="menu" role="navigation"></nav>
+            <section data-ui-view="breadcrumbs"></section>
+            <section data-ui-view="content"></section>
+            <footer data-ui-view="footer"></footer>
+        </div>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->     
+
+        <!-- In production use:
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+        <script src="build/angularjs-template-x.x.x.min.js></script>
+        -->
+        <!-- Bower scripts: -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <!--<script src="bower_components/angular-mocks/angular-mocks.js"></script>-->
+<!--        <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- Application scripts: -->
+        <script src="core/app.js"></script>
+        <script src="core/app.routes.js"></script>
+        <script src="core/indexController.js"></script>
+        <script src="core/form/formController.js"></script>
+        <script src="core/json/jsonController.js"></script>
+        <script src="core/json/jsonService.js"></script>
+        <script src="core/mountains/detailsController.js"></script>
+        <script src="core/mountains/listController.js"></script>
+        <script src="core/mountains/mountainsService.js"></script>
+        <script src="core/navigation/breadcrumbsController.js"></script>
+        <script src="core/navigation/footerController.js"></script>
+        <script src="core/navigation/headerController.js"></script>
+        <script src="core/navigation/menuController.js"></script>
+        <script src="common/directives/datepickerDirective.js"></script>
+        <script src="common/directives/versionDirective.js"></script>
+        <script src="common/constants/constants.js"></script>
+        <script src="common/filters/filters.js"></script>
+        <script src="core/todos/categoriesService.js"></script>
+        <script src="core/todos/newController.js"></script>
+        <script src="core/todos/todosService.js"></script>
+        <script src="core/todos/listController.js"></script>
+    </body>
+</html>

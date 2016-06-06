@@ -1,0 +1,60 @@
+{
+    "name": "angularjs-template",
+    "version": "0.0.1",
+    "description": "A starter project for AngularJS based on John Papa's style guide",
+    "keywords": [
+        "AngularJS",
+        "angular",
+        "template",
+        "angularjs-template",
+        "seed"
+    ],
+    "homepage": "https://github.com/pamigomp/angularjs-template",
+    "bugs": {
+        "url": "https://github.com/pamigomp/angularjs-template/issues"
+    },
+    "license": "MIT",
+    "author": "Michal Pietrzak",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pamigomp/angularjs-template.git"
+    },
+    "scripts": {
+        "postinstall": "bower install",
+        "prestart": "npm install",
+        "start": "http-server -a localhost -p 8000 -c-1",
+        "pretest": "npm install",
+        "test": "grunt karma:unit",
+        "test-single-run": "grunt karma:singleRun",
+        "preupdate-webdriver": "npm install",
+        "update-webdriver": "webdriver-manager update",
+        "preprotractor": "npm run update-webdriver",
+        "protractor": "grunt protractor"
+    },
+    "devDependencies": {
+        "bower": "^1.7.9",
+        "grunt": "^1.0.1",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-jshint": "^1.0.0",
+        "grunt-contrib-uglify": "^1.0.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-jscs": "^3.0.0",
+        "grunt-karma": "^2.0.0",
+        "grunt-protractor-runner": "^3.2.0",
+        "http-server": "^0.9.0",
+        "jasmine-core": "^2.4.1",
+        "jasmine-reporters": "^2.1.1",
+        "karma": "^0.13.22",
+        "karma-chrome-launcher": "^1.0.1",
+        "karma-coverage": "^1.0.0",
+        "karma-firefox-launcher": "^1.0.0",
+        "karma-jasmine": "^1.0.2",
+        "karma-junit-reporter": "^1.0.0",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "load-grunt-tasks": "^3.5.0",
+        "phantomjs-prebuilt": "^2.1.7",
+        "protractor": "^3.3.0",
+        "selenium-webdriver": "^2.53.2"
+    },
+    "private": false
+}

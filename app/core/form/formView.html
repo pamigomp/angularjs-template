@@ -1,0 +1,26 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Form</h3>
+    </div>
+    <div class="panel-body">
+        <form name="ContactForm">
+            Name:
+            <input type="text" data-ng-model="FC.contact.firstName" name="firstName" class="form-control" required />
+            Surname:
+            <input type="text" data-ng-model="FC.contact.lastName" class="form-control" required />
+            E-mail:
+            <input type="email" data-ng-model="FC.contact.email" class="form-control" required />
+            Note:
+            <textarea data-ng-model="FC.contact.info" class="form-control" required></textarea>
+            Gender:
+            <input type="radio" data-ng-model="FC.contact.gender" value="male" class="radio radio-inline" />male
+            <input type="radio" data-ng-model="FC.contact.gender" value="female" class="radio radio-inline" />female
+            <br />
+            Age:
+            <input type="number" data-ng-model="FC.contact.age" class="form-control" required />
+            <button class="btn btn-success" data-ng-click="FC.update(FC.contact)" data-ng-disabled="ContactForm.$invalid">Save <span class="glyphicon glyphicon-ok"></span></button>
+        </form>
+    </div>
+</div>
+<pre>form = {{FC.contact| json}}</pre>
+<pre>contactForm = {{FC.contactForm| json}}</pre>
