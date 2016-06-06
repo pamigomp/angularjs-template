@@ -5,14 +5,9 @@ exports.config = {
     specs: [
         'tests/e2e/**/*.js'
     ],
-    multiCapabilities: [{
-            'browserName': 'firefox'
-        }, {
-            'browserName': 'chrome',
-            'chromeOptions': {
-                'args': ['--disable-extensions']
-            }
-        }],
+    capabilities: {
+        'browserName': 'firefox'
+    },
     baseUrl: 'http://localhost:8000/app/',
     framework: 'jasmine',
     onPrepare: function () {
