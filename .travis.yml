@@ -17,7 +17,9 @@ before_script:
 script:
   - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
   - node_modules/.bin/protractor protractor.conf.js --browser=firefox
-  
+ 
+after_success: 'npm run coveralls'
+
 branches:
   only:
     - master

@@ -27,6 +27,7 @@ test/tmp
 report
 coverage
 *-test-results
+.coveralls.yml
 
 # MongoDB #
 ###########

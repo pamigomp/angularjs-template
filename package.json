@@ -25,6 +25,7 @@
         "start": "http-server -a localhost -p 8000 -c-1",
         "pretest": "npm install",
         "test": "grunt karma:unit",
+        "coveralls": "cat ./coverage/*/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
         "test-single-run": "grunt karma:singleRun",
         "preupdate-webdriver": "npm install",
         "update-webdriver": "webdriver-manager update",
@@ -33,6 +34,7 @@
     },
     "devDependencies": {
         "bower": "^1.7.9",
+        "coveralls": "^2.11.9",
         "grunt": "^1.0.1",
         "grunt-contrib-concat": "^1.0.1",
         "grunt-contrib-jshint": "^1.0.0",

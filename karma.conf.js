@@ -35,7 +35,7 @@ module.exports = function (config) {
         ],
         singleRun: false,
         coverageReporter: {
-            type: 'html',
+            type: 'lcov',
             dir: 'coverage/'
         },
         junitReporter: {

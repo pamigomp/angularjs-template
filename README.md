@@ -1,6 +1,7 @@
 # angularjs-template - advanced template for AngularJS apps
 
 [![Build Status](https://travis-ci.org/pamigomp/angularjs-template.svg?branch=master)](https://travis-ci.org/pamigomp/angularjs-template)
+[![Coverage Status](https://coveralls.io/repos/github/pamigomp/angularjs-template/badge.svg?branch=master)](https://coveralls.io/github/pamigomp/angularjs-template?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pamigomp/angularjs-template.svg)](https://gemnasium.com/github.com/pamigomp/angularjs-template)
 
