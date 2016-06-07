@@ -102,13 +102,13 @@ module.exports = function (grunt) {
             }
         },
         protractor: {
+            options: {
+                configFile: 'protractor.conf.js'
+            },
             e2e: {
-                options: {
-                    configFile: 'protractor.conf.js',
-                    keepAlive: true,
-                    noColor: false,
-                    args: {
-                    }
+                keepAlive: true,
+                noColor: false,
+                args: {
                 }
             }
         },
@@ -121,7 +121,8 @@ module.exports = function (grunt) {
             },
             singleRun: {
                 autoWatch: false,
-                singleRun: true
+                singleRun: true,
+                browsers: ['Firefox']
             }
         }
     });
