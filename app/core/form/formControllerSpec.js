@@ -3,7 +3,7 @@
 "use strict";
 
 describe("FormController", function () {
-    var controller, vm;
+    var date, controller, vm;
 
     beforeEach(module("app.form"));
 
@@ -17,8 +17,8 @@ describe("FormController", function () {
     });
 
     it("should update contact form", function () {
-        vm.date = new Date();
-        expect(vm.contactForm).toEqual({date: vm.date});
+        date = new Date();
+        expect(vm.contactForm).toEqual({date: date});
 
         var contact = {
             "firstname": "Michal",

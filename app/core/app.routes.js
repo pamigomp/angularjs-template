@@ -147,7 +147,4 @@ angular.module('app')
                                 }
                             }
                         });
-            }])
-        .run(['$rootScope', function ($rootScope) {
-                $rootScope.dateOriginal = new Date();
             }]);

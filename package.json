@@ -7,7 +7,9 @@
         "angular",
         "template",
         "angularjs-template",
-        "seed"
+        "seed",
+        "johnpapa",
+        "styleguide"
     ],
     "homepage": "https://github.com/pamigomp/angularjs-template",
     "bugs": {
