@@ -12,7 +12,7 @@ angular.module('app', [
     'app.nav.menu',
     'app.todos.new',
     'app.todos.list',
-    'app.ng-date-picker',
-    'app.version-directive',
+    'app.directives.datepicker',
+    'app.directives.version',
     'app.filters'
 ]);

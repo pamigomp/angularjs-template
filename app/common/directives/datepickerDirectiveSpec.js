@@ -5,7 +5,7 @@
 describe("Datepicker directive", function () {
     var date, elm, scope;
 
-    beforeEach(module("app.ng-date-picker"));
+    beforeEach(module("app.directives.datepicker"));
 
     it('should put the date in the model', function () {
         return inject(function ($compile, $rootScope) {

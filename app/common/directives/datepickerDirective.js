@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.ng-date-picker', [])
+angular.module('app.directives.datepicker', [])
 
         .directive('ngDatePicker', function () {
             return {

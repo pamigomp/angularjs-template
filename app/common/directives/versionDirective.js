@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.version-directive', ['app'])
+angular.module('app.directives.version', ['app'])
 
         .directive('appVersion', ['APP_VERSION', function (APP_VERSION) {
                 return function (scope, elm, attrs) {

@@ -5,7 +5,7 @@
 describe("Version directive", function () {
     var elm, scope;
 
-    beforeEach(module("app.version-directive"));
+    beforeEach(module("app.directives.version"));
 
     it("should return current version", inject(function ($rootScope, $compile) {
         scope = $rootScope.$new();
