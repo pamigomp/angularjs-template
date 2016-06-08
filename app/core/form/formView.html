@@ -4,20 +4,36 @@
     </div>
     <div class="panel-body">
         <form name="ContactForm">
-            Name:
-            <input type="text" data-ng-model="FC.contact.firstName" name="firstName" class="form-control" required />
-            Surname:
-            <input type="text" data-ng-model="FC.contact.lastName" class="form-control" required />
-            E-mail:
-            <input type="email" data-ng-model="FC.contact.email" class="form-control" required />
-            Note:
-            <textarea data-ng-model="FC.contact.info" class="form-control" required></textarea>
-            Gender:
-            <input type="radio" data-ng-model="FC.contact.gender" value="male" class="radio radio-inline" />male
-            <input type="radio" data-ng-model="FC.contact.gender" value="female" class="radio radio-inline" />female
-            <br />
-            Age:
-            <input type="number" data-ng-model="FC.contact.age" class="form-control" required />
+            <div class="form-group has-feedback" data-ng-class="ContactForm.firstName.$valid ? 'has-success' : (ContactForm.firstName.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="firstName">Name:</label>
+                <input id="firstName" name="firstName" type="text" data-ng-model="FC.contact.firstName" class="form-control" required />
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.firstName.$valid ? 'glyphicon-ok' : (ContactForm.firstName.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
+            <div class="form-group has-feedback" data-ng-class="ContactForm.lastName.$valid ? 'has-success' : (ContactForm.lastName.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="lastName">Surname:</label>
+                <input id="lastName" name="lastName" type="text" data-ng-model="FC.contact.lastName" class="form-control" required />
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.lastName.$valid ? 'glyphicon-ok' : (ContactForm.lastName.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
+            <div class="form-group has-feedback" data-ng-class="ContactForm.email.$valid ? 'has-success' : (ContactForm.email.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="email">E-mail:</label>
+                <input id="email" name="email" type="email" data-ng-model="FC.contact.email" class="form-control" required />
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.email.$valid ? 'glyphicon-ok' : (ContactForm.email.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="control-label" for="gender">Gender:</label>
+                <input id="gender" name="gender" type="radio" data-ng-model="FC.contact.gender" value="male" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>male
+                <input id="gender" name="gender" type="radio" data-ng-model="FC.contact.gender" value="female" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>female
+            </div>
+            <div class="form-group has-feedback" data-ng-class="ContactForm.age.$valid ? 'has-success' : (ContactForm.age.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="age">Age:</label>
+                <input id="age" name="age" type="number" min="0" max="150" data-ng-model="FC.contact.age" class="form-control" required />
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.age.$valid ? 'glyphicon-ok' : (ContactForm.age.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
+            <div class="form-group has-feedback" data-ng-class="ContactForm.info.$valid ? 'has-success' : (ContactForm.info.$pristine ? '' : 'has-error')">
+                <label class="control-label" for="info">Note:</label>
+                <textarea id="info" name="info" data-ng-model="FC.contact.info" maxlength="150" class="form-control" required></textarea>
+                <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.info.$valid ? 'glyphicon-ok' : (ContactForm.info.$pristine ? '' : 'glyphicon-remove')"></span>
+            </div>
             <button class="btn btn-success" data-ng-click="FC.update(FC.contact)" data-ng-disabled="ContactForm.$invalid">Save <span class="glyphicon glyphicon-ok"></span></button>
         </form>
     </div>
