@@ -13,6 +13,6 @@ angular.module('app', [
     'app.todos.new',
     'app.todos.list',
     'app.directives.datepicker',
-    'app.directives.version',
+    'app.directives.about',
     'app.filters'
 ]);
