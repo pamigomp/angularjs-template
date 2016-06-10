@@ -3,7 +3,12 @@
 angular.module('app')
 
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+                $urlRouterProvider.when('', '/todos/list');
                 $urlRouterProvider.when('/', '/todos/list');
+                $urlRouterProvider.when('/todos', '/todos/list');
+                $urlRouterProvider.when('/todos/', '/todos/list');
+                $urlRouterProvider.when('/mountains', '/mountains/list');
+                $urlRouterProvider.when('/mountains/', '/mountains/list');
                 $urlRouterProvider.otherwise('/');
                 $stateProvider
                         .state('root', {
