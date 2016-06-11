@@ -21,8 +21,8 @@
             </div>
             <div class="form-group has-feedback">
                 <label class="control-label" for="gender">Gender:</label>
-                <input id="gender" name="gender" type="radio" data-ng-model="FC.contact.gender" value="male" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>male
-                <input id="gender" name="gender" type="radio" data-ng-model="FC.contact.gender" value="female" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>female
+                <input id="male" name="gender" type="radio" data-ng-model="FC.contact.gender" value="male" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>male
+                <input id="female" name="gender" type="radio" data-ng-model="FC.contact.gender" value="female" class="radio radio-inline" data-ng-required="!FC.contact.gender"/>female
             </div>
             <div class="form-group has-feedback" data-ng-class="ContactForm.age.$valid ? 'has-success' : (ContactForm.age.$pristine ? '' : 'has-error')">
                 <label class="control-label" for="age">Age:</label>
@@ -34,9 +34,9 @@
                 <textarea id="info" name="info" data-ng-model="FC.contact.info" maxlength="150" class="form-control" required></textarea>
                 <span class="glyphicon form-control-feedback" data-ng-class="ContactForm.info.$valid ? 'glyphicon-ok' : (ContactForm.info.$pristine ? '' : 'glyphicon-remove')"></span>
             </div>
-            <button class="btn btn-success" data-ng-click="FC.update(FC.contact)" data-ng-disabled="ContactForm.$invalid">Save <span class="glyphicon glyphicon-ok"></span></button>
+            <button id="save-btn" class="btn btn-success" data-ng-click="FC.update(FC.contact)" data-ng-disabled="ContactForm.$invalid">Save <span class="glyphicon glyphicon-ok"></span></button>
         </form>
     </div>
 </div>
 <pre>form = {{FC.contact| json}}</pre>
-<pre>contactForm = {{FC.contactForm| json}}</pre>
+<pre id="contactForm">contactForm = {{FC.contactForm| json}}</pre>
