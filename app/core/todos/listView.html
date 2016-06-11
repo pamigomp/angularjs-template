@@ -14,7 +14,7 @@
                     <th>Mark as completed</th>
                 </tr>
             </thead>
-            <tr data-ng-repeat="todo in ::IC.todos" class="repeat-animation">
+            <tr data-ng-repeat="todo in IC.todos" class="repeat-animation">
                 <td>{{$index + 1}}. </td>
                 <td><span class="done-{{todo.done}}">{{todo.title}}</span></td>
                 <td><span class="done-{{todo.done}}">({{todo.estimates}}h)</span></td>
