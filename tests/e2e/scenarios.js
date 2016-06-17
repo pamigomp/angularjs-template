@@ -4,9 +4,11 @@
 
 describe('AngularJS Template', function () {
     var page = require('./pages/page.js');
+
     beforeEach(function () {
         browser.driver.manage().window().maximize();
     });
+
     it('should automatically redirect to /todos/list when location hash/fragment is empty', function () {
         page.getHomepage();
         expect(page.getLocation()).toEqual('/todos/list');
@@ -40,6 +42,16 @@ describe('AngularJS Template', function () {
 
             expect(todosListPage.isRowForNamePresent('Date')).toBeFalsy();
             expect(todosListPage.isRowForNamePresent('Gym')).toBeTruthy();
+            expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
+            expect(todosListPage.isRowForNamePresent('Meeting')).toBeFalsy();
+        });
+
+        it('should filter tasks when user type text into search field', function () {
+            var textToSearch = 'Homework';
+
+            todosListPage.searchText(textToSearch);
+            expect(todosListPage.isRowForNamePresent('Date')).toBeFalsy();
+            expect(todosListPage.isRowForNamePresent('Gym')).toBeFalsy();
             expect(todosListPage.isRowForNamePresent('Homework')).toBeTruthy();
             expect(todosListPage.isRowForNamePresent('Meeting')).toBeFalsy();
         });

@@ -6,6 +6,7 @@ var TodosListPage = function () {
     var panelTitle = element(by.css('.panel-title'));
     var rowName = '//tr//span[text()=\'%s\']';
     var rowCheckboxForName = rowName + '//..//..//td[6]//input';
+    var searchField = element(by.xpath('//input[@id=\'search\']'));
 
     this.clickAddButton = function () {
         addButton.click();
@@ -33,6 +34,11 @@ var TodosListPage = function () {
         var xpath = rowCheckboxForName.replace('%s', name);
         var row = element(by.xpath(xpath));
         row.click();
+    };
+
+    this.searchText = function (textToSearch) {
+        searchField.clear();
+        searchField.sendKeys(textToSearch);
     };
 };
 

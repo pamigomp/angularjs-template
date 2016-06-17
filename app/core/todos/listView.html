@@ -3,26 +3,32 @@
         <h3 class="panel-title">To-do list</h3>
     </div>
     <div class="panel-body">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Name</th>
-                    <th>Estimation</th>
-                    <th>Date</th>
-                    <th>Ico</th>
-                    <th>Mark as completed</th>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input id="search" type="search" class="form-control" placeholder="Search..." data-ng-model="search">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-xs-1">No.</th>
+                        <th class="col-xs-7">Name</th>
+                        <th class="col-xs-1">Estimation</th>
+                        <th class="col-xs-1">Date</th>
+                        <th class="col-xs-1">Ico</th>
+                        <th class="col-xs-1">Completed</th>
+                    </tr>
+                </thead>
+                <tr data-ng-repeat="todo in IC.todos| filter: search" class="repeat-animation">
+                    <td>{{$index + 1}}. </td>
+                    <td><span class="done-{{todo.done}}">{{todo.title}}</span></td>
+                    <td><span class="done-{{todo.done}}">({{todo.estimates}}h)</span></td>
+                    <td><span class="done-{{todo.done}}">{{todo.date}}</span></td>
+                    <td><span class="glyphicon glyphicon-{{todo.type.gico}} done-{{todo.done}}" title="{{todo.type.name}}"></span></td>
+                    <td><input type="checkbox" data-ng-model="todo.done" title="Mark as completed" /></td>
                 </tr>
-            </thead>
-            <tr data-ng-repeat="todo in IC.todos" class="repeat-animation">
-                <td>{{$index + 1}}. </td>
-                <td><span class="done-{{todo.done}}">{{todo.title}}</span></td>
-                <td><span class="done-{{todo.done}}">({{todo.estimates}}h)</span></td>
-                <td><span class="done-{{todo.done}}">{{todo.date}}</span></td>
-                <td><span class="glyphicon glyphicon-{{todo.type.gico}} done-{{todo.done}}" title="{{todo.type.name}}"></span></td>
-                <td><input type="checkbox" data-ng-model="todo.done" title="Mark as completed" /></td>
-            </tr>
-        </table>
+            </table>
+        </div>
     </div>
 </div>
 <div class="panel panel-default">
