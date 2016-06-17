@@ -1,16 +1,19 @@
 <div class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a id="app-title" class="navbar-brand" href="#/">AngularJS Template</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li data-ng-class="MC.getClass('root.todos.list')"><a id="todos-list-page-link" data-ui-sref="root.todos.list">Todos</a></li>
-                <li data-ng-class="MC.getClass('dash')"><a>|</a></li>
                 <li data-ng-class="MC.getClass('root.json')"><a id="json-page-link" data-ui-sref="root.json">JSON</a></li>
-                <li data-ng-class="MC.getClass('dash')"><a>|</a></li>
                 <li data-ng-class="MC.getClass('root.mountains.list')"><a id="mountains-list-page-link" data-ui-sref="root.mountains.list">Mountains</a></li>
-                <li data-ng-class="MC.getClass('dash')"><a>|</a></li>
                 <li data-ng-class="MC.getClass('root.form')"><a id="form-page-link" data-ui-sref="root.form">Form</a></li>
             </ul>
         </div>
