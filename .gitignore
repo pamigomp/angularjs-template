@@ -1,6 +1,6 @@
 !.gitkeep
 
-# Ignore Visual Studio  Project #
+# Ignore Visual Studio Project #
 #################################
 *.user
 *.gpState

@@ -23,9 +23,9 @@
         ];
 
         return {
+            deleteById: deleteById,
             getAll: getAll,
-            getById: getById,
-            deleteById: deleteById
+            getById: getById
         };
 
         function getAll() {
