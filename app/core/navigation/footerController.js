@@ -1,7 +1,9 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.nav.footer', [])
+    angular.module('app.nav.footer', [])
 
-        .controller('FooterController', function () {
+            .controller('FooterController', function () {
 
-        });
+            });
+})();

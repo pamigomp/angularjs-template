@@ -1,24 +1,26 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.index', ['app.todosService'])
+    angular.module('app.index', ['app.todosService'])
 
-        .controller('IndexController', ['$log', 'todosService', function ($log, todosService) {
-                var vm = this;
-                vm.todos = [];
+            .controller('IndexController', ['$log', 'todosService', function ($log, todosService) {
+                    var vm = this;
+                    vm.todos = [];
 
-                retrieve();
+                    retrieve();
 
-                function retrieve() {
-                    return getTodos().then(function () {
-                        $log.info('Retrieved Todos');
-                    });
-                }
+                    function retrieve() {
+                        return getTodos().then(function () {
+                            $log.info('Retrieved Todos');
+                        });
+                    }
 
-                function getTodos() {
-                    return todosService.getTodos()
-                            .then(function (data) {
-                                vm.todos = data;
-                                return vm.todos;
-                            });
-                }
-            }]);
+                    function getTodos() {
+                        return todosService.getTodos()
+                                .then(function (data) {
+                                    vm.todos = data;
+                                    return vm.todos;
+                                });
+                    }
+                }]);
+})();

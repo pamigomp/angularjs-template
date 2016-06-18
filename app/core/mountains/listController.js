@@ -1,9 +1,11 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.mountains.list', ['app.mountainsService'])
+    angular.module('app.mountains.list', ['app.mountainsService'])
 
-        .controller('MountainsListController', ['mountainsService', function (mountainsService) {
-                var vm = this;
+            .controller('MountainsListController', ['mountainsService', function (mountainsService) {
+                    var vm = this;
 
-                vm.mountains = mountainsService.getAll();
-            }]);
+                    vm.mountains = mountainsService.getAll();
+                }]);
+})();

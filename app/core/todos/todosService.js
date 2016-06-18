@@ -1,25 +1,27 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.todosService', [])
+    angular.module('app.todosService', [])
 
-        .factory('todosService', ['$http', '$log', '$q', function ($http, $log, $q) {
-                return {
-                    getTodos: getTodos
-                };
+            .factory('todosService', ['$http', '$log', '$q', function ($http, $log, $q) {
+                    return {
+                        getTodos: getTodos
+                    };
 
-                function getTodos() {
-                    return $http.get('assets/data/todos.json')
-                            .then(getTodosComplete)
-                            .catch(getTodosFailed);
+                    function getTodos() {
+                        return $http.get('assets/data/todos.json')
+                                .then(getTodosComplete)
+                                .catch(getTodosFailed);
 
-                    function getTodosComplete(response) {
-                        return response.data;
+                        function getTodosComplete(response) {
+                            return response.data;
+                        }
+
+                        function getTodosFailed(e) {
+                            var newMessage = 'XHR Failed for getTodos.';
+                            $log.error(newMessage);
+                            return $q.reject(e);
+                        }
                     }
-
-                    function getTodosFailed(e) {
-                        var newMessage = 'XHR Failed for getTodos.';
-                        $log.error(newMessage);
-                        return $q.reject(e);
-                    }
-                }
-            }]);
+                }]);
+})();

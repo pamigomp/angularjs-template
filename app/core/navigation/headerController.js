@@ -1,7 +1,9 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.nav.header', [])
+    angular.module('app.nav.header', [])
 
-        .controller('HeaderController', function () {
+            .controller('HeaderController', function () {
 
-        });
+            });
+})();

@@ -1,7 +1,9 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.nav.breadcrumbs', [])
+    angular.module('app.nav.breadcrumbs', [])
 
-        .controller('BreadcrumbsController', function () {
+            .controller('BreadcrumbsController', function () {
 
-        });
+            });
+})();

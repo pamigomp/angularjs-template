@@ -1,24 +1,26 @@
-'use strict';
+(function () {
+    'use strict';
 
-angular.module('app.json', ['app.jsonService'])
+    angular.module('app.json', ['app.jsonService'])
 
-        .controller('JsonController', ['$log', 'jsonService', function ($log, jsonService) {
-                var vm = this;
+            .controller('JsonController', ['$log', 'jsonService', function ($log, jsonService) {
+                    var vm = this;
 
-                vm.json = [];
+                    vm.json = [];
 
-                retrieve();
+                    retrieve();
 
-                function retrieve() {
-                    return getJson().then(function () {
-                        $log.info('Retrieved Json');
-                    });
-                }
+                    function retrieve() {
+                        return getJson().then(function () {
+                            $log.info('Retrieved Json');
+                        });
+                    }
 
-                function getJson() {
-                    return jsonService.getData().then(function (data) {
-                        vm.json = data;
-                        return vm.json;
-                    });
-                }
-            }]);
+                    function getJson() {
+                        return jsonService.getData().then(function (data) {
+                            vm.json = data;
+                            return vm.json;
+                        });
+                    }
+                }]);
+})();
