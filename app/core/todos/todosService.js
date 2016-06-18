@@ -3,25 +3,29 @@
 
     angular.module('app.todosService', [])
 
-            .factory('todosService', ['$http', '$log', '$q', function ($http, $log, $q) {
-                    return {
-                        getTodos: getTodos
-                    };
+            .factory('todosService', todosService);
 
-                    function getTodos() {
-                        return $http.get('assets/data/todos.json')
-                                .then(getTodosComplete)
-                                .catch(getTodosFailed);
+    todosService.$inject = ['$http', '$log', '$q'];
 
-                        function getTodosComplete(response) {
-                            return response.data;
-                        }
+    function todosService($http, $log, $q) {
+        return {
+            getTodos: getTodos
+        };
 
-                        function getTodosFailed(e) {
-                            var newMessage = 'XHR Failed for getTodos.';
-                            $log.error(newMessage);
-                            return $q.reject(e);
-                        }
-                    }
-                }]);
+        function getTodos() {
+            return $http.get('assets/data/todos.json')
+                    .then(getTodosComplete)
+                    .catch(getTodosFailed);
+
+            function getTodosComplete(response) {
+                return response.data;
+            }
+
+            function getTodosFailed(e) {
+                var newMessage = 'XHR Failed for getTodos.';
+                $log.error(newMessage);
+                return $q.reject(e);
+            }
+        }
+    }
 })();

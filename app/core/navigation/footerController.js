@@ -3,7 +3,11 @@
 
     angular.module('app.nav.footer', [])
 
-            .controller('FooterController', function () {
+            .controller('FooterController', FooterController);
 
-            });
+    FooterController.$inject = [];
+
+    function FooterController() {
+
+    }
 })();

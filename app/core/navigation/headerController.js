@@ -3,7 +3,11 @@
 
     angular.module('app.nav.header', [])
 
-            .controller('HeaderController', function () {
+            .controller('HeaderController', HeaderController);
 
-            });
+    HeaderController.$inject = [];
+
+    function HeaderController() {
+
+    }
 })();

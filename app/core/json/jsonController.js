@@ -3,24 +3,28 @@
 
     angular.module('app.json', ['app.jsonService'])
 
-            .controller('JsonController', ['$log', 'jsonService', function ($log, jsonService) {
-                    var vm = this;
+            .controller('JsonController', JsonController);
 
-                    vm.json = [];
+    JsonController.$inject = ['$log', 'jsonService'];
 
-                    retrieve();
+    function JsonController($log, jsonService) {
+        var vm = this;
 
-                    function retrieve() {
-                        return getJson().then(function () {
-                            $log.info('Retrieved Json');
-                        });
-                    }
+        vm.json = [];
 
-                    function getJson() {
-                        return jsonService.getData().then(function (data) {
-                            vm.json = data;
-                            return vm.json;
-                        });
-                    }
-                }]);
+        retrieve();
+
+        function retrieve() {
+            return getJson().then(function () {
+                $log.info('Retrieved Json');
+            });
+        }
+
+        function getJson() {
+            return jsonService.getData().then(function (data) {
+                vm.json = data;
+                return vm.json;
+            });
+        }
+    }
 })();

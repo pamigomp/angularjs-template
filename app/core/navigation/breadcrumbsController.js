@@ -3,7 +3,11 @@
 
     angular.module('app.nav.breadcrumbs', [])
 
-            .controller('BreadcrumbsController', function () {
+            .controller('BreadcrumbsController', BreadcrumbsController);
 
-            });
+    BreadcrumbsController.$inject = [];
+
+    function BreadcrumbsController() {
+
+    }
 })();

@@ -3,24 +3,28 @@
 
     angular.module('app.index', ['app.todosService'])
 
-            .controller('IndexController', ['$log', 'todosService', function ($log, todosService) {
-                    var vm = this;
-                    vm.todos = [];
+            .controller('IndexController', IndexController);
 
-                    retrieve();
+    IndexController.$inject = ['$log', 'todosService'];
 
-                    function retrieve() {
-                        return getTodos().then(function () {
-                            $log.info('Retrieved Todos');
-                        });
-                    }
+    function IndexController($log, todosService) {
+        var vm = this;
+        vm.todos = [];
 
-                    function getTodos() {
-                        return todosService.getTodos()
-                                .then(function (data) {
-                                    vm.todos = data;
-                                    return vm.todos;
-                                });
-                    }
-                }]);
+        retrieve();
+
+        function retrieve() {
+            return getTodos().then(function () {
+                $log.info('Retrieved Todos');
+            });
+        }
+
+        function getTodos() {
+            return todosService.getTodos()
+                    .then(function (data) {
+                        vm.todos = data;
+                        return vm.todos;
+                    });
+        }
+    }
 })();

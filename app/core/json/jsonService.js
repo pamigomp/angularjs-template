@@ -3,25 +3,29 @@
 
     angular.module('app.jsonService', [])
 
-            .factory('jsonService', ['$http', '$log', '$q', function ($http, $log, $q) {
-                    return {
-                        getData: getData
-                    };
+            .factory('jsonService', jsonService);
 
-                    function getData() {
-                        return $http.get('assets/data/data.json')
-                                .then(getDataComplete)
-                                .catch(getDataFailed);
+    jsonService.$inject = ['$http', '$log', '$q'];
 
-                        function getDataComplete(response) {
-                            return response.data;
-                        }
+    function jsonService($http, $log, $q) {
+        return {
+            getData: getData
+        };
 
-                        function getDataFailed(e) {
-                            var newMessage = 'XHR Failed for getData.';
-                            $log.error(newMessage);
-                            return $q.reject(e);
-                        }
-                    }
-                }]);
+        function getData() {
+            return $http.get('assets/data/data.json')
+                    .then(getDataComplete)
+                    .catch(getDataFailed);
+
+            function getDataComplete(response) {
+                return response.data;
+            }
+
+            function getDataFailed(e) {
+                var newMessage = 'XHR Failed for getData.';
+                $log.error(newMessage);
+                return $q.reject(e);
+            }
+        }
+    }
 })();

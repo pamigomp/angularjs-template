@@ -3,9 +3,13 @@
 
     angular.module('app.mountains.list', ['app.mountainsService'])
 
-            .controller('MountainsListController', ['mountainsService', function (mountainsService) {
-                    var vm = this;
+            .controller('MountainsListController', MountainsListController);
 
-                    vm.mountains = mountainsService.getAll();
-                }]);
+    MountainsListController.$inject = ['mountainsService'];
+
+    function MountainsListController(mountainsService) {
+        var vm = this;
+
+        vm.mountains = mountainsService.getAll();
+    }
 })();

@@ -3,15 +3,19 @@
 
     angular.module('app.form', [])
 
-            .controller('FormController', function () {
-                var vm = this;
+            .controller('FormController', FormController);
 
-                var date = new Date();
-                vm.contactForm = {date: date};
-                vm.update = update;
+    FormController.$inject = [];
 
-                function update(contact) {
-                    vm.contactForm = angular.copy(contact);
-                }
-            });
+    function FormController() {
+        var vm = this;
+
+        var date = new Date();
+        vm.contactForm = {date: date};
+        vm.update = update;
+
+        function update(contact) {
+            vm.contactForm = angular.copy(contact);
+        }
+    }
 })();
