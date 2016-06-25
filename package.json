@@ -21,10 +21,11 @@
         "type": "git",
         "url": "https://github.com/pamigomp/angularjs-template.git"
     },
+    "main": "server.js",
     "scripts": {
         "postinstall": "bower install",
         "prestart": "npm install",
-        "start": "http-server -a localhost -p 8000 -c-1",
+        "start": "node server.js",
         "pretest": "npm install",
         "test": "grunt karma:unit",
         "coveralls": "cat ./coverage/*/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
@@ -33,6 +34,10 @@
         "update-webdriver": "webdriver-manager update",
         "preprotractor": "npm run update-webdriver",
         "protractor": "grunt protractor"
+    },
+    "dependencies": {
+        "bower": "^1.7.9",
+        "express": "^4.14.0"
     },
     "devDependencies": {
         "bower": "^1.7.9",

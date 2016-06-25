@@ -1,7 +1,7 @@
 !.gitkeep
 
 # Ignore Visual Studio Project #
-#################################
+################################
 *.user
 *.gpState
 *.suo
@@ -43,7 +43,7 @@ journal
 nbproject
 
 # Ignore WebStorm #
-####################
+###################
 .idea
 
 # Compiled source #
