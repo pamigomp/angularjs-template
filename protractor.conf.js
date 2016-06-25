@@ -8,7 +8,7 @@ exports.config = {
     capabilities: {
         'browserName': 'firefox'
     },
-    baseUrl: 'http://localhost:8000/app/',
+    baseUrl: 'http://localhost:8000/',
     framework: 'jasmine',
     onPrepare: function () {
         browser.driver.manage().window().setSize(800, 600);
