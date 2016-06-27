@@ -5,5 +5,5 @@
 
             .constant('APP_AUTHOR', 'Michal Pietrzak')
             .constant('APP_NAME', 'AngularJS Template')
-            .constant('APP_VERSION', '0.0.3');
+            .constant('APP_VERSION', '0.0.4');
 })();

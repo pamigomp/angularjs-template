@@ -11,6 +11,6 @@ describe("About directive", function () {
         scope = $rootScope.$new();
         elm = angular.element('<span app-about></span>');
         $compile(elm)(scope);
-        expect(elm.text()).toEqual("AngularJS Template app v0.0.3 by Michal Pietrzak");
+        expect(elm.text()).toEqual("AngularJS Template app v0.0.4 by Michal Pietrzak");
     }));
 });

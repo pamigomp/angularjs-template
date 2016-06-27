@@ -12,7 +12,7 @@ describe('AngularJS Template', function () {
 
     it('should display name, version and author of app in footer ', function () {
         page.getHomepage();
-        expect(page.getAppFooter()).toEqual('AngularJS Template app v0.0.3 by Michal Pietrzak');
+        expect(page.getAppFooter()).toEqual('AngularJS Template app v0.0.4 by Michal Pietrzak');
     });
 
     describe('todos list', function () {
