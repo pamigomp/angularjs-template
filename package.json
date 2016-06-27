@@ -47,22 +47,26 @@
         "grunt-contrib-jshint": "^1.0.0",
         "grunt-contrib-uglify": "^1.0.1",
         "grunt-contrib-watch": "^1.0.0",
-        "grunt-jscs": "^3.0.0",
+        "grunt-jscs": "^3.0.1",
         "grunt-karma": "^2.0.0",
         "grunt-protractor-runner": "^3.2.0",
         "jasmine-core": "^2.4.1",
-        "jasmine-reporters": "^2.1.1",
-        "karma": "^0.13.22",
+        "jasmine-reporters": "^2.2.0",
+        "karma": "^1.1.0",
         "karma-chrome-launcher": "^1.0.1",
         "karma-coverage": "^1.0.0",
         "karma-firefox-launcher": "^1.0.0",
         "karma-jasmine": "^1.0.2",
-        "karma-junit-reporter": "^1.0.0",
-        "karma-phantomjs-launcher": "^1.0.0",
+        "karma-junit-reporter": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.1",
         "load-grunt-tasks": "^3.5.0",
         "phantomjs-prebuilt": "^2.1.7",
         "protractor": "^3.3.0",
         "selenium-webdriver": "^2.53.2"
+    },
+    "engines": {
+        "node": "^4.4.2",
+        "npm": "^2.15.0"
     },
     "private": false
 }
