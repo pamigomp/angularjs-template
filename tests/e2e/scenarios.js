@@ -5,10 +5,6 @@
 describe('AngularJS Template', function () {
     var page = require('./pages/page.js');
 
-    beforeEach(function () {
-        browser.driver.manage().window().maximize();
-    });
-
     it('should automatically redirect to /todos/list when location hash/fragment is empty', function () {
         page.getHomepage();
         expect(page.getLocation()).toEqual('/todos/list');

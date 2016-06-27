@@ -11,7 +11,7 @@ exports.config = {
     baseUrl: 'http://localhost:8000/',
     framework: 'jasmine',
     onPrepare: function () {
-        browser.driver.manage().window().setSize(800, 600);
+        browser.driver.manage().window().maximize();
         var jasmineReporters = require('jasmine-reporters');
         return browser.getProcessedConfig().then(function (config) {
             var browserName = config.capabilities.browserName;

@@ -9,6 +9,7 @@
 
     function IndexController($log, todosService) {
         var vm = this;
+
         vm.todos = [];
 
         retrieve();

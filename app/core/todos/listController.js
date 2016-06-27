@@ -9,6 +9,7 @@
 
     function TodosListController($scope) {
         var vm = this;
+
         vm.deleteCompleted = deleteCompleted;
 
         function deleteCompleted() {
