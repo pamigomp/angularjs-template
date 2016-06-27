@@ -4,10 +4,16 @@
 [![Coverage Status](https://coveralls.io/repos/github/pamigomp/angularjs-template/badge.svg?branch=master)](https://coveralls.io/github/pamigomp/angularjs-template?branch=master)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://gemnasium.com/badges/github.com/pamigomp/angularjs-template.svg)](https://gemnasium.com/github.com/pamigomp/angularjs-template)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 This project extends the [seed project](http://github.com/angular/angular-seed) for angular apps provided by AngularJS team. It also bases on an awesome [John Papa's style guide](https://github.com/johnpapa/angular-styleguide). It is an application template for a typical [AngularJS](http://angularjs.org/) web app. You can use it to quickly bootstrap your angular web app projects and dev environment for these projects.
 
 The template contains a sample AngularJS application and is preconfigured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
+
+## Online Demo
+
+You can go to following website, to see app preview:
+https://angularjstemplate.herokuapp.com
 
 ## Getting Started
 
@@ -35,6 +41,15 @@ git clone --depth=1 https://github.com/pamigomp/angularjs-template.git <your-pro
 ```
 
 The `depth=1` tells git to only pull down one commit worth of historical data.
+
+### Install with npm
+
+You can also install angularjs-template with [npm][npm]:
+
+```bash
+npm install angularjs-template
+cd node_modules/angularjs-template
+```
 
 ### Install Dependencies
 
@@ -70,7 +85,7 @@ We have preconfigured the project with a simple development web server. The simp
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/app/index.html`.
+Now browse to the app at `http://localhost:8000`.
 
 ## Directory Layout
 
@@ -107,10 +122,13 @@ unit-test-results/                  --> unit tests results
 .jshintrc                           --> JSHint options file
 .travis.yml                         --> Travis CI config file
 Gruntfile.js                        --> Grunt config file
+Procfile                            --> define command which starts app
+app.json                            --> web application details file
 bower.json                          --> runtime dependencies of the project
 karma.conf.js                       --> Karma config file (for unit tests)
 package.json                        --> development dependencies of the project
 protractor-conf.js                  --> Protractor config file (for e2e tests)
+server.js                           --> server config file
 ```
 
 ## Testing
@@ -193,7 +211,7 @@ While angular is client-side-only technology and it's possible to create angular
 
 ### Running the App during Development
 
-The angularjs-template project comes preconfigured with a local development webserver. It is a node.js tool called [http-server][http-server]. You can start this webserver with:
+The angularjs-template project comes preconfigured with a local development webserver. You can start this webserver with:
 
 ```bash
 npm start
@@ -217,6 +235,14 @@ If your Angular app is talking to the backend server via xhr or other means, you
 [Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits to your repository and execute scripts such as building the app or running tests. The angularjs-template project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your tests when you push to GitHub.
 
 You will need to enable the integration between Travis and GitHub. See the Travis website for more instruction on how to do this.
+
+## Cloud
+
+### Heroku
+
+[Heroku][heroku] is a platform as a service (PaaS) that enables developers to build, deliver, monitor, scale and run applications entirely in the cloud. It is supporting several programming languages.
+
+You will need to enable the integration between Heroku and GitHub. See the Heroku website for more instruction on how to do this.
 
 ## Automation tool
 
@@ -256,6 +282,10 @@ The following list of tasks is preconfigured in `Gruntfile.js` file:
 
     Run unit tests with karma.
 
+- `grunt default`
+
+    Run tasks in the following order: `jshint:all`, `jscs:all`, `karma:singleRun`, `concat`, `uglify:concat`.
+
 ## License
 
 The MIT License, Copyright (c) 2016 Michal Pietrzak
@@ -269,4 +299,4 @@ The MIT License, Copyright (c) 2016 Michal Pietrzak
 [jasmine]: http://jasmine.github.io
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
-[http-server]: https://github.com/nodeapps/http-server
+[heroku]: https://www.heroku.com

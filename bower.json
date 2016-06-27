@@ -9,7 +9,9 @@
         "angularjs-template",
         "seed",
         "johnpapa",
-        "styleguide"
+        "styleguide",
+        "node",
+        "express"
     ],
     "authors": [
         "Michal Pietrzak"

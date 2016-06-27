@@ -9,7 +9,9 @@
         "angularjs-template",
         "seed",
         "johnpapa",
-        "styleguide"
+        "styleguide",
+        "node",
+        "express"
     ],
     "homepage": "https://github.com/pamigomp/angularjs-template",
     "bugs": {
@@ -65,8 +67,8 @@
         "selenium-webdriver": "^2.53.2"
     },
     "engines": {
-        "node": "^4.4.2",
-        "npm": "^2.15.0"
+        "node": "^4.4.6",
+        "npm": "^2.15.5"
     },
     "private": false
 }

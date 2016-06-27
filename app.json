@@ -1,0 +1,18 @@
+{
+    "name": "angularjs-template",
+    "description": "A starter project for AngularJS based on John Papa's style guide",
+    "keywords": [
+        "AngularJS",
+        "angular",
+        "template",
+        "angularjs-template",
+        "seed",
+        "johnpapa",
+        "styleguide",
+        "node",
+        "express"
+    ],
+    "repository": "https://github.com/pamigomp/angularjs-template",
+    "success_url": "/",
+    "addons": []
+}
